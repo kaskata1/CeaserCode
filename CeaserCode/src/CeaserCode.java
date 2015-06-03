@@ -47,17 +47,14 @@ public class CeaserCode {
 	
 	public static String encrypt(String text, int key){
 		 String encrypted="";
-		    for(int i=0;i<text.length();i++)
-		    {
+		    for(int i=0;i<text.length();i++){
 		        int c = text.charAt(i);
-		        if(Character.isUpperCase(c))
-		        {
+		        if(Character.isUpperCase(c)){
 		            c = c + (key%32);
 		            if(c > 'Я')
 		                c = c - 32;
 		        }
-		        else if(Character.isLowerCase(c))
-		        {
+		        else if(Character.isLowerCase(c)){
 		            c = c + (key%32);
 		            if(c > 'я')
 		                c = c - 32;
@@ -70,17 +67,14 @@ public class CeaserCode {
 	public static String decrypt(String text,int key)
 	{
 	    String decrypted="";
-	    for(int i=0;i< text.length();i++)
-	    {
+	    for(int i=0;i< text.length();i++){
 	        int c= text.charAt(i);
-	        if(Character.isUpperCase(c))
-	        {
+	        if(Character.isUpperCase(c)){
 	            c=c-(key%32);
 	            if(c < 'А')
 	                c = c + 32;
 	        }
-	        else if(Character.isLowerCase(c))
-	        {
+	        else if(Character.isLowerCase(c)){
 	            c = c - (key%32);
 	            if(c < 'а')
 	                c = c + 32;
